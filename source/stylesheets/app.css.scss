@@ -1,51 +1,90 @@
-@import "foundation/base";
+// You custom settings file to override Foundation defaults
+@import "settings";
+//the rest of foundation
+@import "foundation";
 
 /* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
-:: Page Name 1
-:: Page Name 2
+:: Home Page
+:: Pricing Page
+:: Gallery Page
 */
 
 
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
-/*-----ORBIT FIX---------*/
-div.orbit-wrapper span.rotator { background: url('../images/foundation/orbit/rotator-black.png') no-repeat; }
-div.orbit-wrapper span.mask.move { background: url('../images/foundation/orbit/timer-black.png') repeat 0 0; }
-div.orbit-wrapper span.pause { background: url('../images/foundation/orbit/pause-black.png') no-repeat; }
-div.orbit-wrapper span.pause.active { background: url('../images/foundation/orbit/pause-black.png') no-repeat 0 -40px; }
-div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
-div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png');  }
-.lt-ie9 div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
-.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png'); }
-ul.orbit-bullets li { background: url('../images/foundation/orbit/bullets.jpg') no-repeat 4px 0; }
-#featured { 
-  background: url('../images/index/spinner.gif') center center #f4f4f4; 
-  background-repeat:no-repeat;
-  height: 300px; 
-  img { 
-    display: none; 
+
+body {
+  background-color: #e9dba5;
+  @include background-image(radial-gradient(50% 50%, #e9dba5, #f8eec7));
+}
+
+header {
+  @include outerRow();
+  h1 {
+    @include column(6);
   }
-  &.orbit { 
-    background: none; 
-    img { 
-      display: block; 
-    }
+  hgroup {
+    @include column(6);
+  }
+}
+
+nav {
+  @include outerRow();
+  .nav-bar {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $mainColor;
+  }
+}
+
+footer {
+  @include outerRow();
+  padding-top: ms(2);
+  background-color: $mainColor;
+  .vcard {
+    float: right;
   }
 }
 
 
 /* -----------------------------------------
-   Page Name 1
+   Home Page
 ----------------------------------------- */
 
+section.main {
+  padding-bottom: ms(2);
+  article {
+    @include outerRow();
+    h2 {
+      @include column(12)
+    }
+    img {
+      @include column(4);
+    }
+    .text {
+      @include column(8);
+    }
+  }
+  article#what_to_expect{
+    img {
+      @include push(8);
+    }
+    .text {
+      @include pull(4);
+    }
+  }
+}
 
 
 
 /* -----------------------------------------
-   Page Name 2
+   Pricing Page
 ----------------------------------------- */
 
+/* -----------------------------------------
+   Gallery Page
+----------------------------------------- */

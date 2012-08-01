@@ -1,25 +1,17 @@
-.row
-  %h1.center
-    Eye Define Beauty
-.row
-  .five.columns
-  
-    %a.small.button(href="#")
-      Small button
-    
-    %a.button(href="#")
-      Button
-    
-    %a.large.button(href="#")
-      Large button
-    
-  .five.columns
-    %a.small.alert.button(href="#")
-      Small alert button
-    
-    %a.success.button(href="#")
-      Success button
-    
-    %a.large.secondary.button(href="#")
-      Large secondary button
-      
+%section.main
+  %article#intro
+    %header
+      %h2 Some sub heading
+    = image_tag lorem.image('350x350')
+    .text
+      %p
+        = lorem.paragraphs 4
+
+  %article#what_to_expect
+    %header
+      %h2 Some sub heading
+    = image_tag lorem.image('350x350')
+    .text
+      %p
+        = lorem.paragraphs 4
+

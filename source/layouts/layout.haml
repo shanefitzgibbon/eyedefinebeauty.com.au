@@ -15,18 +15,8 @@
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
     
     %title 
-      Titel
+      Eye Define Beauty
 
-    %link{ :href => "stylesheets/foundation-style/globals.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/typography.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/grid.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/ui.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/buttons.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/tabs.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/navbar.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/forms.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/orbit.css", :media => "all", :rel => "stylesheet" }/
-    %link{ :href => "stylesheets/foundation-style/reveal.css", :media => "all", :rel => "stylesheet" }/
     %link{ :href => "stylesheets/app.css", :media => "all", :rel => "stylesheet" }/
     %script{ :src => "javascripts/foundation/modernizr.foundation.js" }
       
@@ -35,9 +25,37 @@
     %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
     <![endif]-->
     
-  %body 
+  %body
+
+    %header
+      %h1 Eye Define Beauty
+      %hgroup
+        %h3 Joanne Francis
+        %h3 Eyelash Extension Specialist
+      #image-ribbon
+        = image_tag lorem.image('1200x60')
+
+    %nav
+      %ul.nav-bar.three-up
+        %li
+          = link_to 'Home', '#'
+        %li
+          = link_to 'Prices', '#'
+        %li
+          = link_to 'Gallery', '#'
        
     = yield
+
+    %footer
+      #hcard-Joanne-Francis.vcard
+        %span.fn Joanne Francis
+        .org Eye Define Beauty
+        .adr
+          %span.locality Chadstone
+          ,
+          %span.region VIC
+          %span.country-name Australia
+        .tel 0488052272
   
     / Included JS Files (Uncompressed)
     /  
