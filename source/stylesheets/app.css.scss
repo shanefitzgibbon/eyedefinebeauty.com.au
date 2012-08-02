@@ -22,6 +22,12 @@ body {
   @include background-image(radial-gradient(50% 50%, #e9dba5, #f8eec7));
 }
 
+.container {
+  @include outerRow();
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
+}
+
 header {
   @include outerRow();
   h1 {
@@ -35,6 +41,8 @@ header {
 nav {
   @include outerRow();
   .nav-bar {
+    @include column(4);
+    @include push(8);
     margin-top: 0;
     margin-bottom: 0;
     background-color: $mainColor;
@@ -43,7 +51,7 @@ nav {
 
 footer {
   @include outerRow();
-  padding-top: ms(2);
+  padding: ms(2);
   background-color: $mainColor;
   .vcard {
     float: right;
@@ -59,22 +67,37 @@ section.main {
   padding-bottom: ms(2);
   article {
     @include outerRow();
-    h2 {
+    header {
       @include column(12)
     }
     img {
-      @include column(4);
+      @include column(3);
     }
     .text {
-      @include column(8);
+      @include column(9);
+      ul {
+        list-style-position: inside;
+        li {
+          font-size: ms(2);
+        }
+      }
+      dd {
+        font-size: ms(2);
+      }
     }
   }
-  article#what_to_expect{
+  article#what_to_expect {
     img {
-      @include push(8);
+      @include push(9);
     }
     .text {
-      @include pull(4);
+      @include pull(3);
+    }
+  }
+  article#introduction {
+    p {
+      @include column(12);
+      font-size: ms(2);
     }
   }
 }
