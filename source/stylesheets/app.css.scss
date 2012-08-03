@@ -3,6 +3,10 @@
 //the rest of foundation
 @import "foundation";
 
+//the compass modules
+@import "compass/typography/text/replacement";
+@import "compass/utilities/color/contrast";
+
 /* --------------------------------------------------
    Table of Contents
 -----------------------------------------------------
@@ -16,6 +20,8 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+
+//@include sticky-footer(72px, "#container", "#container_footer", "footer"
 
 body {
   background-color: #e9dba5;
@@ -32,20 +38,33 @@ header {
   @include outerRow();
   h1 {
     @include column(6);
+    @include replace-text('title-text.png');
+    background-size: 95% 95%;
+    height: ms(10);
   }
   hgroup {
     @include column(6);
+    @include replace-text('other-text-500.png');
+    height: ms(10);
+    background-size: 95% 95%;
   }
 }
 
 nav {
   @include outerRow();
-  .nav-bar {
-    @include column(4);
-    @include push(8);
-    margin-top: 0;
-    margin-bottom: 0;
+  ul.block-grid.three-up {
+    @include column(12);
+    margin: 0;
     background-color: $mainColor;
+    li {
+      text-align: center;
+      padding: 5px;
+      a {
+        @include contrasted($mainColor);
+        font-weight: bold;
+      }
+
+    }
   }
 }
 

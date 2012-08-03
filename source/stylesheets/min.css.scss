@@ -1,0 +1,28 @@
+@import "compass/layout.scss";
+
+@include sticky-footer(130px);
+
+$mainColor: #a48b30;
+
+@font-face {
+  font-family: 'HeroLight';
+  src: url('hero_light-webfont.eot');
+  src: url('hero_light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('hero_light-webfont.woff') format('woff'),
+  url('hero_light-webfont.ttf') format('truetype'),
+  url('hero_light-webfont.svg#HeroLightLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: HeroLight, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+#footer {
+  padding: 0 10px;
+  background-color: $mainColor;
+  .vcard {
+    float: right;
+  }
+}
