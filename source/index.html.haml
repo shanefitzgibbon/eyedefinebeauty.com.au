@@ -1,42 +1,30 @@
 %section.main
   %article#introduction
-    %header
-      %h3 Welcome to Eye Define Beauty, a Boutique salon located near Chadstone Shopping Centre.
-      %p We are specialists in Eyelash Extensions, and pride ourselves on our individual service, expertise, and continual client satisfaction.
-  %article#goodbye
-    %header
-      %h2 Say Goodbye to that Mascara Brush & say Hello to:
-    = image_tag lorem.image('350x350')
-    .text
-      %ul
-        %li Longer, thicker natural lashes
-        %li Enhance curvature
-        %li Define Eye shape and length
-        %li Weightless and natural looking
-        %li Always customised to each individual client
+    .row
+      .twelve.columns
+        %header
+          %h3 Welcome to Eye Define Beauty, a Boutique salon located near Chadstone Shopping Centre.
+          %p We are specialists in Eyelash Extensions, and pride ourselves on our individual service, expertise, and continual client satisfaction.
 
-  %article#what_to_expect
-    %header
-      %h2 What to Expect:
-    = image_tag lorem.image('350x350')
-    .text
-      %ul
-        %li We use synthetic single strand eyelash extensions that replicate your natural lash.
-        %li They are available in various thicknesses, lengths and curvatures
-        %li Feel like your own natural lash
-        %li Painless, relaxing application
-        %li Allow 1.5hrs for first full set
+  = partial 'goodbye-brush'
+
+  = partial 'what-to-expect'
 
   %article#why_wait
-    %header
-      %h2 What are you waiting for ... ?
-      %h4 Are you ready for those WOW! eye turning stunning lashes & be the envy of all your friends?
+    .row
+      .twelve.columns
+        %header
+          %h2 What are you waiting for ... ?
+          %h3 Are you ready for those WOW! eye turning stunning lashes & be the envy of all your friends?
 
   %article#contact
-    %header
-      %h2 Contact Details
-    .row.text.six_columns.center
-      %dd Ph : 0488 052 272
-      %dd E-mail : eyedefinebeauty@gmail.com
+    .row
+      .twelve.columns
+        %header
+          %h2 Contact Details
+    .row.text
+      .twelve.columns
+        %p Ph : 0488 052 272
+        %p E-mail : eyedefinebeauty@gmail.com
 
 

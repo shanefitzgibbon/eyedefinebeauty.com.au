@@ -6,6 +6,7 @@
 //the compass modules
 @import "compass/typography/text/replacement";
 @import "compass/utilities/color/contrast";
+@import "compass/css3/images";
 
 /* --------------------------------------------------
    Table of Contents
@@ -24,26 +25,29 @@
 //@include sticky-footer(72px, "#container", "#container_footer", "footer"
 
 body {
-  background-color: #e9dba5;
-  @include background-image(radial-gradient(50% 50%, #e9dba5, #f8eec7));
+  background-color: #e6e5e5;
+  @include background-image(radial-gradient(50% 50%, #e6e5e5, #4f4f4f));
 }
 
-.container {
-  @include outerRow();
+.content-holder {
+  width: $rowWidth;
+  max-width: 100%;
+  //min-width: $screenSmall;
+  margin: 0 auto;
+  @include background-image(image-url('lashes-bg.png'));
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: #fff;
   background-color: rgba(255,255,255,0.75);
 }
 
 header {
-  @include outerRow();
   h1 {
-    @include column(6);
     @include replace-text('title-text.png');
     background-size: 95% 95%;
     height: ms(10);
   }
   hgroup {
-    @include column(6);
     @include replace-text('other-text-500.png');
     height: ms(10);
     background-size: 95% 95%;
@@ -51,9 +55,7 @@ header {
 }
 
 nav {
-  @include outerRow();
   ul.block-grid.three-up {
-    @include column(12);
     margin: 0;
     background-color: $mainColor;
     li {
@@ -69,11 +71,13 @@ nav {
 }
 
 footer {
-  @include outerRow();
-  padding: ms(2);
-  background-color: $mainColor;
-  .vcard {
-    float: right;
+  .row{
+    padding: ms(2);
+    background-color: $mainColor;
+    .vcard {
+      float: right;
+      font-size: ms(1);
+    }
   }
 }
 
@@ -83,39 +87,25 @@ footer {
 ----------------------------------------- */
 
 section.main {
-  padding-bottom: ms(2);
+  //padding-bottom: ms(2);
   article {
-    @include outerRow();
-    header {
-      @include column(12)
-    }
-    img {
-      @include column(3);
-    }
     .text {
-      @include column(9);
       ul {
         list-style-position: inside;
         li {
           font-size: ms(2);
         }
       }
-      dd {
-        font-size: ms(2);
-      }
     }
   }
-  article#what_to_expect {
-    img {
-      @include push(9);
-    }
-    .text {
-      @include pull(3);
+  article#contact {
+    text-align: center;
+    p {
+      font-size: ms(2);
     }
   }
   article#introduction {
     p {
-      @include column(12);
       font-size: ms(2);
     }
   }

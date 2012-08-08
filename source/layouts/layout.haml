@@ -26,40 +26,38 @@
     <![endif]-->
     
   %body
-    %nav
-      %ul.block-grid.three-up.mobile
-        %li
-          = link_to 'Home', '#'
-        %li
-          = link_to 'Prices', '#'
-        %li
-          = link_to 'Gallery', '#'
-
-    %header
-      %h1 Eye Define Beauty
-      %hgroup
-        %h3 Joanne Francis
-        %h3 Eyelash Extension Specialist
-      -##image-ribbon
+    .content-holder
+      .row
+        %nav
+          %ul.block-grid.three-up.mobile
+            %li
+              = link_to 'Home', '#'
+            %li
+              = link_to 'Prices', '#'
+            %li
+              = link_to 'Gallery', '#'
+      .row#title
+        %header
+          .six.columns
+            %h1 Eye Define Beauty
+          .six.columns
+            %hgroup
+              %h3 Joanne Francis
+              %h3 Eyelash Extension Specialist
+      -#.row
+      -#  #image-ribbon
       -#  = image_tag lorem.image('1200x60')
 
 
 
-    = yield
+      = yield
 
-    #container_footer
-
-    %footer
-      #hcard-Joanne-Francis.vcard
-        %span.fn Joanne Francis
-        .org Eye Define Beauty
-        .role Eyelash Extension Specialist
-        .adr
-          %span.locality Chadstone
-          ,
-          %span.region VIC
-          %span.country-name Australia
-        .tel 0488052272
+      %footer
+        .row
+          .four.columns
+          .four.columns
+          .four.columns
+            = partial 'vcard'
 
     / Included JS Files (Uncompressed)
     /  
