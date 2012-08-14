@@ -26,24 +26,32 @@
     <![endif]-->
     
   %body
+    .row#title
+      %header
+        .six.columns
+          %h1 Eye Define Beauty
+        .six.columns
+          %hgroup
+            %h3 Joanne Francis
+            %h3 Eyelash Extension Specialist
     .content-holder
-      .row
-        %nav
-          %ul.block-grid.three-up.mobile
-            %li
-              = link_to 'Home', '#'
-            %li
-              = link_to 'Prices', '#'
-            %li
-              = link_to 'Gallery', '#'
-      .row#title
-        %header
-          .six.columns
-            %h1 Eye Define Beauty
-          .six.columns
-            %hgroup
-              %h3 Joanne Francis
-              %h3 Eyelash Extension Specialist
+
+      .row.hide-for-small
+        .twelve.columns
+          %nav
+            %dl.tabs
+              %dd.active
+                %a(href="#home") Home
+              %dd
+                %a(href="#who-gets-lashes") Who gets lashes?
+              %dd
+                %a(href="#what-to-expect") What to expect
+              %dd
+                %a(href="#gallery") Gallery
+              %dd
+                %a(href="#pricing") Pricing
+              %dd
+                %a(href="#contact") Contact Us
       -#.row
       -#  #image-ribbon
       -#  = image_tag lorem.image('1200x60')
@@ -51,6 +59,23 @@
 
 
       = yield
+
+      .row.show-for-small
+        .twelve.columns
+          %nav
+            %dl.tabs.mobile
+              %dd.active
+                %a(href="#home") Home
+              %dd
+                %a(href="#who-gets-lashes") Who gets lashes?
+              %dd
+                %a(href="#what-to-expect") What to expect
+              %dd
+                %a(href="#gallery") Gallery
+              %dd
+                %a(href="#pricing") Pricing
+              %dd
+                %a(href="#contact") Contact Us
 
       %footer
         .row
@@ -60,23 +85,24 @@
             = partial 'vcard'
 
     / Included JS Files (Uncompressed)
-    /  
-      <script src="jquery.js"></script>
-      <script src="javascripts/foundation/modernizr.foundation.js"></script>
-      <script src="javascripts/foundation/jquery.placeholder.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
-      <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+
+    %script{ :src =>"javascripts/jquery.js" }
+    %script{ :src =>"javascripts/foundation/modernizr.foundation.js" }
+    %script{ :src =>"javascripts/foundation/jquery.placeholder.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.alerts.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.accordion.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.buttons.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.tooltips.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.forms.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.tabs.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.navigation.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.reveal.js" }
+    %script{ :src =>"javascripts/foundation/jquery.foundation.orbit.js" }
     
-    / Included JS Files (Compressed) 
-    %script{ :src => "javascripts/jquery.min.js" }
-    %script{ :src => "javascripts/foundation.min.js" }
+    / Included JS Files (Compressed)
+    /
+      %script{ :src => "javascripts/jquery.min.js" }
+      %script{ :src => "javascripts/foundation.min.js" }
     
     / Application Javascript, safe to override
     %script{ :src => "javascripts/app.js" }

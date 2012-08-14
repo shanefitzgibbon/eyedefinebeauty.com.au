@@ -1,30 +1,31 @@
 %section.main
-  %article#introduction
-    .row
-      .twelve.columns
-        %header
-          %h3 Welcome to Eye Define Beauty, a Boutique salon located near Chadstone Shopping Centre.
-          %p We are specialists in Eyelash Extensions, and pride ourselves on our individual service, expertise, and continual client satisfaction.
+  %ul.tabs-content
+    %li#homeTab.active
+      = partial 'intro'
+      %hr.styled
+      = partial 'goodbye-brush'
+      %hr.styled
+      = partial 'why-wait'
+    %li#what-to-expectTab
+      = partial 'what-to-expect'
+    %li#galleryTab
+      .row.hide-for-small
+        / SnapWidget
+        %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no",
+        :src => "http://snapwidget.com/in/?h=ZXllbGFzaGVzfGlufDIwMHw0fDN8fHllc3wyMHxub25l",
+        :style => "border:none; overflow:hidden; width:920px; height: 690px"}
+      .row.show-for-small
+        <!-- SnapWidget -->
+        %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no",
+        :src => "http://snapwidget.com/in/?h=ZXllbGFzaGVzfGlufDgwfDN8NHx8eWVzfDV8bm9uZQ==",
+        :style => "border:none; overflow:hidden; width:285px; height: 380px"}
+    %li#pricingTab
+      = partial 'pricing'
+    %li#who-gets-lashesTab
+      = partial 'who-gets-lashes'
+    %li#contactTab
+      = partial 'contact'
 
-  = partial 'goodbye-brush'
 
-  = partial 'what-to-expect'
-
-  %article#why_wait
-    .row
-      .twelve.columns
-        %header
-          %h2 What are you waiting for ... ?
-          %h3 Are you ready for those WOW! eye turning stunning lashes & be the envy of all your friends?
-
-  %article#contact
-    .row
-      .twelve.columns
-        %header
-          %h2 Contact Details
-    .row.text
-      .twelve.columns
-        %p Ph : 0488 052 272
-        %p E-mail : eyedefinebeauty@gmail.com
 
 

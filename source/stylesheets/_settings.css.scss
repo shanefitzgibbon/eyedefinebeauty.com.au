@@ -1,4 +1,10 @@
-$mainColor: #B8D9D0;
+$color1: #F2F2F2;
+$color2: #B8D9D0;
+$color3: #9BBFB5;
+$color4: #8C8C8C;
+$color5: #595758;
+
+$mainColor: $color3;
 
 @font-face {
   font-family: 'HeroLight';
@@ -11,11 +17,23 @@ $mainColor: #B8D9D0;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'heroregular';
+  src: url('hero-webfont.eot');
+  src: url('hero-webfont.eot?#iefix') format('embedded-opentype'),
+  url('hero-webfont.woff') format('woff'),
+  url('hero-webfont.ttf') format('truetype'),
+  url('hero-webfont.svg#heroregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 // Font Settings
 $headerFontFamily: HeroLight, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 //$headerFontWeight: bold !default;
 //$headerFontColor: #222 !default;
-$bodyFontFamily: HeroLight, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$bodyFontFamily: heroregular, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 //$bodyFontWeight: normal !default;
 //$bodyFontColor: #222 !default;
 
