@@ -24,6 +24,10 @@
 
 //@include sticky-footer(72px, "#container", "#container_footer", "footer"
 
+h1, h2, h3, h4, h5, h6 {
+  color: $headerFontColor;
+}
+
 body {
   background-color: $color4;
   @include background-image(radial-gradient(50% 50%, $color4, $color5));
@@ -175,7 +179,7 @@ article.pricing {
         height: 120px;
         -moz-border-radius: 60px;
         border-radius: 60px;
-        background: #57ca8e;
+        background: $color3;
         color: white;
         text-align: center;
         font-family: "proxima-nova", sans-serif;
