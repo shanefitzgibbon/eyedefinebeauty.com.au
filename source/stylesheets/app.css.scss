@@ -29,8 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: $color4;
-  @include background-image(radial-gradient(50% 50%, $color4, $color5));
+  background-color: $color1;
+  //@include background-image(radial-gradient(50% 50%, $color4, $color1));
 }
 
 #title {
@@ -47,6 +47,9 @@ body {
   background-size: 100%;
   background-color: #fff;
   background-color: rgba(255,255,255,0.90);
+  .row {
+    overflow: visible;;
+  }
 }
 
 header {
@@ -63,6 +66,7 @@ header {
 }
 
 nav {
+  overflow: visible;
   a {
     font-weight: bold;
   }
@@ -71,7 +75,7 @@ nav {
 footer {
   .row{
     padding: ms(2);
-    background-color: $color2;
+    background-color: $color4;
     .vcard {
       float: right;
       font-size: ms(1);
@@ -203,6 +207,7 @@ article.pricing {
         text-align: center;
         font-size: ms(2);
         padding: 0 8px 0 8px;
+        color: white;
       }
     }
   }
