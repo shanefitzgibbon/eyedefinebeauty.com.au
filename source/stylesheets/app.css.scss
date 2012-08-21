@@ -226,3 +226,8 @@ article.pricing {
 /* -----------------------------------------
    Gallery Page
 ----------------------------------------- */
+#featured { background: url(spinner.gif) center center #f4f4f4; height: 300px; }
+#featured img { display: none; }
+
+#featured.orbit { background: none; }
+#featured.orbit img { display: block; }

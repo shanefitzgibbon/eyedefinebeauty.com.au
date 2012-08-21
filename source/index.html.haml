@@ -9,16 +9,7 @@
     %li#what-to-expectTab
       = partial 'what-to-expect'
     %li#galleryTab
-      .row.hide-for-small
-        / SnapWidget
-        %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no",
-        :src => "http://snapwidget.com/in/?h=ZXllbGFzaGVzfGlufDIwMHw0fDN8fHllc3wyMHxub25l",
-        :style => "border:none; overflow:hidden; width:920px; height: 690px"}
-      .row.show-for-small
-        <!-- SnapWidget -->
-        %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no",
-        :src => "http://snapwidget.com/in/?h=ZXllbGFzaGVzfGlufDgwfDN8NHx8eWVzfDV8bm9uZQ==",
-        :style => "border:none; overflow:hidden; width:285px; height: 380px"}
+      = partial 'gallery'
     %li#pricingTab
       = partial 'pricing'
     %li#who-gets-lashesTab
