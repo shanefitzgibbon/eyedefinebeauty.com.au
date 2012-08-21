@@ -62,10 +62,6 @@
                 %a(href="#pricing") Pricing
               %dd
                 %a(href="#contact") Contact Us
-      -#.row
-      -#  #image-ribbon
-      -#  = image_tag lorem.image('1200x60')
-
 
 
       = yield
@@ -94,24 +90,24 @@
           .four.columns
             = partial 'vcard'
     / Included JS Files (Uncompressed)
-
-    %script{ :src =>"javascripts/jquery.js" }
-    %script{ :src =>"javascripts/foundation/modernizr.foundation.js" }
-    %script{ :src =>"javascripts/foundation/jquery.placeholder.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.alerts.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.accordion.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.buttons.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.tooltips.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.forms.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.tabs.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.navigation.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.reveal.js" }
-    %script{ :src =>"javascripts/foundation/jquery.foundation.orbit.js" }
+    /
+      %script{ :src =>"javascripts/jquery.js" }
+      %script{ :src =>"javascripts/foundation/modernizr.foundation.js" }
+      %script{ :src =>"javascripts/foundation/jquery.placeholder.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.alerts.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.accordion.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.buttons.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.tooltips.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.forms.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.tabs.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.navigation.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.reveal.js" }
+      %script{ :src =>"javascripts/foundation/jquery.foundation.orbit.js" }
     
     / Included JS Files (Compressed)
-    /
-      %script{ :src => "javascripts/jquery.min.js" }
-      %script{ :src => "javascripts/foundation.min.js" }
+
+    %script{ :src => "javascripts/jquery.min.js" }
+    %script{ :src => "javascripts/foundation.min.js" }
     
     / Application Javascript, safe to override
     %script{ :src => "javascripts/app.js" }
@@ -120,9 +116,9 @@
       $(window).load(function() {
         $('#featured').orbit({
           timer: false,
-          bullets: true,			 // true or false to activate the bullet navigation
+          bullets: false,			 // true or false to activate the bullet navigation
           bulletThumbs: false, // thumbnails for the bullets
           bulletThumbLocation: './images/gallery/thumbs/',
-          fluid: true
+          fluid: '4x3'
         });
       });
