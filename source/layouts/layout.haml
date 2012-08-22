@@ -41,15 +41,15 @@
       %header
         .six.columns
           %h1 Eye Define Beauty
-        .six.columns
+        .six.columns.hide-for-small
           %hgroup
             %h3 Joanne Francis
             %h3 Eyelash Extension Specialist
     .content-holder
-      .row.hide-for-small
+      .row
         .twelve.columns
           %nav
-            %dl.tabs
+            %dl.tabs.hide-for-small
               %dd#home-tab
                 %a(href="/") Home
               %dd#who-gets-lashes-tab
@@ -62,6 +62,14 @@
                 %a(href="/pricing.html") Pricing
               %dd#contact-tab
                 %a(href="/contact.html") Contact Us
+            %select.show-for-small
+              %option{:selected => "selected", :value => ""} Navigate to..
+              %option#home-option{:value => "/"} Home
+              %option#who-gets-lashes-option{:value => "/who-gets-lashes.html"} Who gets lashes?
+              %option#what-to-expect-option{:value => "/what-to-expect.html"} What to expect
+              %option#gallery-option{:value => "/gallery.html"} Gallery
+              %option#pricing-option{:value => "/pricing.html"} Pricing
+              %option#contact-option{:value => "/contact.html"} Contact Us
 
       %section.main
         = yield
@@ -101,4 +109,7 @@
       $(document).ready(function(){
         $('nav dl.tabs dd').not('#{@active_tab}').removeClass('active');
         $('#{@active_tab}').addClass('active');
+      });
+      $("nav select").change(function() {
+        window.location = $(this).find("option:selected").val();
       });
