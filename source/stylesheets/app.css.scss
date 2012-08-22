@@ -244,7 +244,11 @@ article.pricing {
 /* -----------------------------------------
    Gallery Page
 ----------------------------------------- */
-#featured { background: image-url('foundation/orbit/loading.gif') center center #f4f4f4; height: 300px; }
+#featured {
+  background: image-url('foundation/orbit/loading.gif') center center #f4f4f4;
+  background-repeat: no-repeat;
+  height: 300px;
+}
 #featured img { display: none; }
 
 #featured.orbit { background: none; }

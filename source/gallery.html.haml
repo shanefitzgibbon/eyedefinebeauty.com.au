@@ -7,12 +7,12 @@
   .row
     .eight.columns.centered
       #featured
-        = image_tag "gallery/photo2.JPG", { 'data-thumb' => 'photo2-thumbnail.jpg' }
-        = image_tag 'gallery/photo3.JPG', { 'data-thumb' => 'photo3-thumbnail.jpg' }
-        = image_tag 'gallery/photo4.JPG', { 'data-thumb' => 'photo4-thumbnail.jpg' }
-        = image_tag "gallery/photo5.JPG", { 'data-thumb' => 'photo5-thumbnail.jpg' }
-        = image_tag 'gallery/photo6.JPG', { 'data-thumb' => 'photo6-thumbnail.jpg' }
-        = image_tag 'gallery/photo7.JPG', { 'data-thumb' => 'photo7-thumbnail.jpg' }
+        = image_tag "gallery/eyelash-sample1.jpg", { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
+        = image_tag 'gallery/eyelash-sample2.jpg', { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
+        = image_tag 'gallery/eyelash-sample3.jpg', { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
+        = image_tag "gallery/eyelash-sample4.jpg", { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
+        = image_tag 'gallery/eyelash-sample5.jpg', { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
+        = image_tag 'gallery/eyelash-sample6.jpg', { 'alt' => 'Sample of Eye Define Beauty eyelash extensions' }
 
 - content_for :extra_js do
   :javascript
@@ -21,7 +21,6 @@
         timer: false,
         bullets: false,			 // true or false to activate the bullet navigation
         bulletThumbs: false, // thumbnails for the bullets
-        bulletThumbLocation: './images/gallery/thumbs/',
         fluid: '4x3'
       });
     });
