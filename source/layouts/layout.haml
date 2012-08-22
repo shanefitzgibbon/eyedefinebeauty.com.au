@@ -99,6 +99,6 @@
 
     :javascript
       $(document).ready(function(){
-        $('nav dl.tabs dd').removeClass('active');
+        $('nav dl.tabs dd').not('#{@active_tab}').removeClass('active');
         $('#{@active_tab}').addClass('active');
       });
