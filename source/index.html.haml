@@ -1,21 +1,12 @@
-%section.main
-  %ul.tabs-content
-    %li#homeTab.active
-      = partial 'intro'
-      %hr.styled
-      = partial 'goodbye-brush'
-      %hr.styled
-      = partial 'why-wait'
-    %li#what-to-expectTab
-      = partial 'what-to-expect'
-    %li#galleryTab
-      = partial 'gallery'
-    %li#pricingTab
-      = partial 'pricing'
-    %li#who-gets-lashesTab
-      = partial 'who-gets-lashes'
-    %li#contactTab
-      = partial 'contact'
+- @active_tab = 'dd#home-tab'
+
+%article#home
+  = partial 'intro'
+  %hr.styled
+  = partial 'goodbye-brush'
+  %hr.styled
+  = partial 'why-wait'
+
 
 
 

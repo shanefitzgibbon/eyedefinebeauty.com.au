@@ -1,3 +1,5 @@
+- @active_tab = 'dd#gallery-tab'
+
 %article#photoGallery
   .row
     .eight.columns.centered
@@ -8,3 +10,15 @@
         = image_tag "gallery/photo5.JPG", { 'data-thumb' => 'photo5-thumbnail.jpg' }
         = image_tag 'gallery/photo6.JPG', { 'data-thumb' => 'photo6-thumbnail.jpg' }
         = image_tag 'gallery/photo7.JPG', { 'data-thumb' => 'photo7-thumbnail.jpg' }
+
+- content_for :extra_js do
+  :javascript
+    $(window).load(function() {
+      $('#featured').orbit({
+        timer: false,
+        bullets: false,			 // true or false to activate the bullet navigation
+        bulletThumbs: false, // thumbnails for the bullets
+        bulletThumbLocation: './images/gallery/thumbs/',
+        fluid: '4x3'
+      });
+    });

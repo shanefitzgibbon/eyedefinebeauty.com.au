@@ -50,45 +50,28 @@
         .twelve.columns
           %nav
             %dl.tabs
-              %dd.active
-                %a(href="#home") Home
-              %dd
-                %a(href="#who-gets-lashes") Who gets lashes?
-              %dd
-                %a(href="#what-to-expect") What to expect
-              %dd
-                %a(href="#gallery") Gallery
-              %dd
-                %a(href="#pricing") Pricing
-              %dd
-                %a(href="#contact") Contact Us
+              %dd#home-tab
+                %a(href="/") Home
+              %dd#who-gets-lashes-tab
+                %a(href="/who-gets-lashes.html") Who gets lashes?
+              %dd#what-to-expect-tab
+                %a(href="/what-to-expect.html") What to expect
+              %dd#gallery-tab
+                %a(href="/gallery.html") Gallery
+              %dd#pricing-tab
+                %a(href="/pricing.html") Pricing
+              %dd#contact-tab
+                %a(href="/contact.html") Contact Us
 
-
-      = yield
-
-      .row.show-for-small
-        .twelve.columns
-          %nav
-            %dl.tabs.mobile
-              %dd.active
-                %a(href="#home") Home
-              %dd
-                %a(href="#who-gets-lashes") Who gets lashes?
-              %dd
-                %a(href="#what-to-expect") What to expect
-              %dd
-                %a(href="#gallery") Gallery
-              %dd
-                %a(href="#pricing") Pricing
-              %dd
-                %a(href="#contact") Contact Us
+      %section.main
+        = yield
 
       %footer
         .row
           .four.columns
+            .copyright Copyright &copy; 2012 Joanne Francis
           .four.columns
           .four.columns
-            = partial 'vcard'
     / Included JS Files (Uncompressed)
     /
       %script{ :src =>"javascripts/jquery.js" }
@@ -112,13 +95,10 @@
     / Application Javascript, safe to override
     %script{ :src => "javascripts/app.js" }
 
+    = yield_content :extra_js
+
     :javascript
-      $(window).load(function() {
-        $('#featured').orbit({
-          timer: false,
-          bullets: false,			 // true or false to activate the bullet navigation
-          bulletThumbs: false, // thumbnails for the bullets
-          bulletThumbLocation: './images/gallery/thumbs/',
-          fluid: '4x3'
-        });
+      $(document).ready(function(){
+        $('nav dl.tabs dd').removeClass('active');
+        $('#{@active_tab}').addClass('active');
       });
