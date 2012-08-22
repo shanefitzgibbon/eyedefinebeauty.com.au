@@ -17,6 +17,7 @@
 :: Home Page
 :: Pricing Page
 :: Gallery Page
+:: Contact Page
 */
 
 
@@ -88,10 +89,6 @@ footer {
   .row{
     padding: ms(2);
     background-color: $color4;
-    .vcard {
-      float: right;
-      font-size: ms(1);
-    }
   }
 }
 
@@ -110,6 +107,12 @@ section.main {
         li {
           font-size: ms(2);
         }
+        @include respondTo(smallScreen){
+          margin-left: 1em;
+          li {
+            font-size: ms(1);
+          }
+        }
       }
     }
   }
@@ -122,6 +125,9 @@ section.main {
   article#introduction {
     p {
       font-size: ms(2);
+      @include respondTo(smallScreen){
+        font-size: ms(1);
+      }
     }
   }
   hr.styled {
@@ -147,6 +153,7 @@ article.pricing {
   .price-plan {
     background-color: $color5;
     padding-top: 8px;
+    margin-bottom: 10px;
     h2, h3 {
       color: #fff;
       text-transform: uppercase;
@@ -164,7 +171,6 @@ article.pricing {
     }
     .price {
       padding: 0 0 30px 0;
-
       .inside {
         font-weight: 100;
         color: white;
@@ -243,3 +249,35 @@ article.pricing {
 
 #featured.orbit { background: none; }
 #featured.orbit img { display: block; }
+
+/* -----------------------------------------
+   Contact Page
+----------------------------------------- */
+article#contact {
+  .vcard, .vcard div {
+    font-size: ms(3);
+  }
+  .vcard {
+    .fn, .org, .role {
+      text-transform: uppercase;
+      font-family: $headerFontFamily;
+      letter-spacing: 0.1em;
+    }
+    .fn {
+      font-weight: bolder;
+      @include respondTo(smallScreen){
+        font-weight: normal;
+      }
+    }
+    a[href^="tel"]{
+      background-color: #5da423;
+      padding: 1px 30px 2px 10px;
+      @include border-radius(1000px);
+      @include background-image(image-url('phone_2.png'));
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+      background-origin: padding;
+      color: white;
+    }
+  }
+}
