@@ -247,7 +247,7 @@ article.pricing {
 #featured {
   background: image-url('foundation/orbit/loading.gif') center center #f4f4f4;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 480px;
 }
 #featured img { display: none; }
 
@@ -271,6 +271,12 @@ article#contact {
       font-weight: bolder;
       @include respondTo(smallScreen){
         font-weight: normal;
+      }
+    }
+    .email {
+      @include respondTo(smallScreen){
+        font-size: 18px;
+        line-height: 1.5;
       }
     }
     a[href^="tel"]{
